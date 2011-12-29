@@ -16,8 +16,6 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/templates-sommer.
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 A set of templates for using LaTeX packages that the author
@@ -33,7 +31,6 @@ Jena; - Psycho-Dipl.tex: for diploma theses in psychology.
 %doc %{_texmfdistdir}/doc/latex/templates-sommer/Psycho-Dipl.bib
 %doc %{_texmfdistdir}/doc/latex/templates-sommer/Psycho-Dipl.tex
 %doc %{_texmfdistdir}/doc/latex/templates-sommer/README.de
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -44,5 +41,3 @@ Jena; - Psycho-Dipl.tex: for diploma theses in psychology.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
