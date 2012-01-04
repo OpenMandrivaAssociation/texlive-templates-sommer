@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-templates-sommer
 Version:	20080824
-Release:	1
+Release:	2
 Summary:	Templates for TeX usage
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/info/templates/sommer
