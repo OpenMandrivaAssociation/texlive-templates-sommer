@@ -41,3 +41,16 @@ Jena; - Psycho-Dipl.tex: for diploma theses in psychology.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080824-2
++ Revision: 756553
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080824-1
++ Revision: 719666
+- texlive-templates-sommer
+- texlive-templates-sommer
+- texlive-templates-sommer
+
