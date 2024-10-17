@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Templates for TeX usage
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/info/templates/sommer
+URL:		https://www.ctan.org/tex-archive/info/templates/sommer
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/templates-sommer.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/templates-sommer.doc.r%{version}.tar.xz
