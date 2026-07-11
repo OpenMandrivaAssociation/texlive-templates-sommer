@@ -1,37 +1,22 @@
-Name:		texlive-templates-sommer
-Version:	15878
-Release:	2
+%global tl_name templates-sommer
+%global tl_revision 79121
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Templates for TeX usage
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/info/templates/sommer
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/templates-sommer.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/templates-sommer.doc.r%{version}.tar.xz
+License:	lppl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/templates-sommer.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/templates-sommer.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A set of templates for using LaTeX packages that the author
-uses, comprising: - Hausarbeit.tex: for students of the
-Lehrstuhl Volkskunde an der Friedrich-Schiller-Universitat
-Jena; - Psycho-Dipl.tex: for diploma theses in psychology.
+A set of templates for using LaTeX packages that the author uses,
+comprising: Hausarbeit.tex: for students of the Lehrstuhl Volkskunde an
+der Friedrich-Schiller-Universitat Jena Psycho-Dipl.tex: for diploma
+theses in psychology
 
-#-----------------------------------------------------------------------
-%files
-%doc %{_texmfdistdir}/doc/latex/templates-sommer/Hausarbeit.bib
-%doc %{_texmfdistdir}/doc/latex/templates-sommer/Hausarbeit.tex
-%doc %{_texmfdistdir}/doc/latex/templates-sommer/Logo.jpg
-%doc %{_texmfdistdir}/doc/latex/templates-sommer/Psycho-Dipl.bib
-%doc %{_texmfdistdir}/doc/latex/templates-sommer/Psycho-Dipl.tex
-%doc %{_texmfdistdir}/doc/latex/templates-sommer/README.de
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar doc %{buildroot}%{_texmfdistdir}
